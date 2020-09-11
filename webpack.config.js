@@ -13,14 +13,14 @@ const stylesRules = {
   use: ["style-loader", "css-loader", "sass-loader"],
 };
 
-// const imagesRules = {
-//   test: /\.(png|svg|jpg|gif)$/,
-//   use: [
-//     {
-//       loader: "file-loader",
-//     },
-//   ],
-// };
+const imagesRules = {
+  test: /\.(png|svg|jpg|gif)$/,
+  use: [
+    {
+      loader: "file-loader",
+    },
+  ],
+};
 
 module.exports = {
   entry: {
@@ -40,7 +40,7 @@ module.exports = {
   },
   module: {
     //These are the rules the webpack will use when he encounters various file types.
-    rules: [stylesRules, jsFileRules],
+    rules: [imagesRules, stylesRules, jsFileRules],
   },
   plugins: [
     new HtmlWebpackPlugin({
